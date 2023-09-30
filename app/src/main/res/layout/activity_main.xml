@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg">
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:text="What is the color of sky?"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.185" />
+
+    <Button
+        android:id="@+id/playAgain"
+        android:layout_width="340dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="29dp"
+        android:background="@color/black"
+
+        android:onClick="again"
+        android:text="Go Back"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/scoretextView"
+        android:layout_width="96dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="40dp"
+        android:background="#01FFE7"
+        android:outlineProvider="bounds"
+
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+
+        android:id="@+id/gridLayout"
+        android:layout_width="360dp"
+        android:layout_height="227dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="28dp"
+        android:orientation="vertical"
+
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/answer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/optionA"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+
+            android:layout_margin="2dp"
+            android:background="#89CFF0"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="A. Option A "
+            android:textColor="@color/black"
+            android:textSize="28dp" />
+
+        <TextView
+            android:id="@+id/optionB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="2dp"
+            android:background="#ff007f"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="B. Option B "
+            android:textColor="@color/black"
+            android:textSize="28dp" />
+
+        <TextView
+            android:id="@+id/optionC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="2dp"
+            android:background="#8ff80e"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="C. Option C "
+            android:textColor="@color/black"
+            android:textSize="28dp" />
+
+        <TextView
+            android:id="@+id/optionD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="2dp"
+            android:background="#FFD700"
+            android:onClick="onClick"
+            android:padding="8dp"
+            android:text="D. Option D "
+            android:textColor="@color/black"
+            android:textSize="28dp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/answer"
+        android:layout_width="359dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="14dp"
+        android:background="#9C27B0"
+
+        android:text="Answer the question"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/playAgain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/timertextView"
+        android:layout_width="93dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="80dp"
+        android:background="#00B0FF"
+        android:outlineProvider="bounds"
+        android:text="30s"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="172dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="24dp"
+        android:background="#000000"
+
+        android:text="Time Remaining"
+        android:textAlignment="center"
+        android:textColor="#FBFBFB"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/timertextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="118dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="24dp"
+        android:background="#000000"
+
+        android:text="Score"
+        android:textAlignment="center"
+        android:textColor="#FBFBFB"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scoretextView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+
+        android:id="@+id/finishScreen"
+
+        android:layout_width="360dp"
+        android:layout_height="559dp"
+        android:layout_marginStart="20dp"
+
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="20dp"
+        android:background="#DC005292"
+        android:fontFamily="@font/aclonica"
+        android:paddingRight="4dp"
+        android:paddingLeft="4dp"
+        android:text="Game Over !!\nYour Score is :\n10/10"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
